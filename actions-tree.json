@@ -1,0 +1,12 @@
+{
+  "toplevel": [
+    { "uuid": "extract-here.nemo_action", "type": "action", "user-label": null, "user-icon": null, "accelerator": null },
+    {
+      "uuid": "extract-to-submenu", "type": "submenu", "user-label": "Extract To", "user-icon": "extract-archive", "accelerator": null,
+      "children": [
+        { "uuid": "extract-to-folder.nemo_action", "type": "action", "user-label": null, "user-icon": null, "accelerator": null },
+        { "uuid": "extract-to-choose.nemo_action", "type": "action", "user-label": null, "user-icon": null, "accelerator": null }
+      ]
+    }
+  ]
+}

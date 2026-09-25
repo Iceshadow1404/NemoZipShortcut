@@ -1,0 +1,8 @@
+[Nemo Action]
+Name=Extract Here
+Comment=Extract the selected archive(s) into the current folder
+Exec=<extract-archive.sh here %F>
+Icon-Name=extract-archive
+Selection=notnone
+Extensions=zip;7z;rar;
+Dependencies=7z;zenity;notify-send;

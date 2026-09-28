@@ -1,6 +1,6 @@
 # NemoZipShortcut
 
-WinRAR-style extract entries for the right-click menu of the [Nemo](https://github.com/linuxmint/nemo) file manager.
+WinRAR-style extract and compress entries for the right-click menu of the [Nemo](https://github.com/linuxmint/nemo) file manager.
 
 Right-click a `.zip`, `.7z` or `.rar` file:
 
@@ -9,11 +9,15 @@ Right-click a `.zip`, `.7z` or `.rar` file:
   - **Extract to "archive-name/"** – extract into a new folder named after the archive (`name (2)`, `name (3)`, … if it already exists)
   - **Choose Folder…** – pick a destination in a folder dialog
 
+Right-click a folder:
+
+- **Create ZIP** – compress the folder into `folder-name.zip` next to it (`name (2).zip`, … if it already exists); with several folders selected, each gets its own zip
+
 Behaviour:
 
 - Existing files are never overwritten; clashing files are saved with a suffix (`file_1.txt`).
 - Password-protected archives (including 7z with encrypted file names) prompt for the password and re-ask when it is wrong. Cancel skips that archive.
-- A progress window is shown while extracting, a desktop notification when done, and an error dialog for archives that fail.
+- A progress window is shown while extracting or compressing, a desktop notification when done, and an error dialog for archives or folders that fail.
 - *Extract Here* and *Choose Folder…* work on multiple selected archives; *Extract to "archive-name/"* appears only for a single selection.
 
 ## Requirements
@@ -46,7 +50,7 @@ If you already have a custom `actions-tree.json`, it is backed up to `actions-tr
 ## Uninstall
 
 ```bash
-rm ~/.local/share/nemo/actions/{extract-archive.sh,extract-here.nemo_action,extract-to-folder.nemo_action,extract-to-choose.nemo_action}
+rm ~/.local/share/nemo/actions/{extract-archive.sh,extract-here.nemo_action,extract-to-folder.nemo_action,extract-to-choose.nemo_action,create-zip.sh,create-zip.nemo_action}
 rm ~/.config/nemo/actions-tree.json   # or restore actions-tree.json.bak
 nemo -q
 ```

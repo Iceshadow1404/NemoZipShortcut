@@ -1,0 +1,8 @@
+[Nemo Action]
+Name=Create ZIP
+Comment=Compress each selected folder into a .zip next to it
+Exec=<create-zip.sh %F>
+Icon-Name=package-x-generic
+Selection=notnone
+Extensions=dir;
+Dependencies=7z;zenity;notify-send;

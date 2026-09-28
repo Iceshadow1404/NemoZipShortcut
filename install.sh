@@ -10,7 +10,7 @@ for dep in nemo 7z zenity notify-send; do
 done
 
 mkdir -p "$actions_dir" "$(dirname "$layout")"
-install -m 755 "$repo/actions/extract-archive.sh" "$actions_dir/"
+install -m 755 "$repo/actions/extract-archive.sh" "$repo/actions/create-zip.sh" "$actions_dir/"
 install -m 644 "$repo"/actions/*.nemo_action "$actions_dir/"
 
 if [[ -f $layout ]] && ! cmp -s "$repo/actions-tree.json" "$layout"; then
